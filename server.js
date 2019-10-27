@@ -15,7 +15,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = 'c8befa57bfe848f7a9fd44e09e5450d6';
 var client_secret = '00812ab3a29d4c6e869542c7cc762d54';
-var redirect_uri = 'http://localhost:8081/callback';
+var redirect_uri = 'https://cs98-duet-auth-server.herokuapp.com/callback';
 
 /**
  * Generates a random string containing numbers and letters
@@ -104,7 +104,7 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('http://localhost:3000/#' +
+        res.redirect('https://hack-a-thing-1.surge.sh/#' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
@@ -143,5 +143,5 @@ app.get('/refresh_token', function(req, res) {
   });
 });
 
-console.log('Listening on 8081');
-app.listen(8081);
+const port = process.env.PORT || 8081;
+app.listen(port);
