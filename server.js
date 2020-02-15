@@ -16,7 +16,7 @@ var cookieParser = require('cookie-parser');
 
 var client_id = 'c8befa57bfe848f7a9fd44e09e5450d6';
 var client_secret = '00812ab3a29d4c6e869542c7cc762d54';
-var redirect_uri = 'http://localhost:8081/callback'; //'https://cs98-duet-auth-server.herokuapp.com/callback';
+var redirect_uri = 'https://cs98-duet-auth-server.herokuapp.com/callback';
 
 /**
  * Generates a random string containing numbers and letters
