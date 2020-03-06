@@ -105,7 +105,7 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('https://duetwith.me/login/#' +
+        res.redirect('http://duetwith.me/login/#' +
             querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
